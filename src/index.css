@@ -1,0 +1,199 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+.over-lay-container {
+    background-color: rgba(0, 0, 0, 0.596);
+}
+.over-lay-container-dark {
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.yarl__container {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.topSection {
+  z-index: 10 !important;
+}
+
+.PreviewThumbProperty1 .swiper-pagination{
+  position: absolute !important;
+}
+
+.btn-close {
+  background-color: #3C7460 !important;
+  --bs-btn-close-opacity: 1 !important;
+  background-size: 24px 24px!important;
+    width: 20px !important;
+    height: 20px !important; /* Ensure the button itself is larger */
+  
+
+  --bs-btn-close-bg: url("icons8-close.svg") !important;
+
+}
+
+.PreviewThumbProperty1 {
+  height: 100% !important;
+}
+
+.PreviewThumbProperty2 {
+  height: 100% !important;
+}
+
+#lines {
+  background-image: url("lines.svg");
+background-repeat: no-repeat;
+background-size: cover;
+filter: invert(1); 
+
+}
+
+#lines-black {
+    background-image: url("lines.svg");
+  --background-overlay: '';
+background-position: center right;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+select option {
+  background: white !important;
+  color: black;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.mySwiperTestimonialSection .swiper-slide {
+  border-radius: 2px;
+  background-color: transparent !important;
+  min-height: 12rem !important;
+}
+
+
+
+.swiper-pagination {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c6c6c6 !important; /* inactive dot color */
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 4px !important;
+  border-radius: 4px !important;
+  transition: width 0.3s ease !important;
+  opacity: 1 !important; /* override default opacity if needed */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3C7460 !important; /* active pill color */
+  width: 24px !important; /* elongated pill shape */
+  height: 8px !important;
+  border-radius: 4px !important;
+}
+
+.custom-cursor {
+  cursor: url('/cursor-arrow.svg') 24 24, auto;
+  cursor: pointer;
+}
+
+.my-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* bg-white/90 */
+  padding-top: 1rem;  /* py-4 */
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm (about 14px) */
+  line-height: 1.375;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.group:hover .my-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.my-text {
+      opacity: 1;
+      transform: translateY(0);
+
+  } 
+
+
+  .ListPropertyBanner-container {
+    background-image: url("banner-01-01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+
+  .my-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* bg-white/90 */
+  padding-top: 1rem;  /* py-4 */
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm (about 14px) */
+  line-height: 1.375;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.group:hover .my-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  
+  
+}
