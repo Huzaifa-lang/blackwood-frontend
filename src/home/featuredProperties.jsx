@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 import { MoveLeft, MoveRight } from "lucide-react";
 import PropertyCard from "../components/propertyCard.jsx";
-import SkeletonFeaturedProperties from "../components/SkeletonFeaturedProperties.jsx";
+import SkeletonFeaturedProperties from "../components/skeletonFeaturedProperties.jsx";
 import { useLocation } from "../context/LocationContext.jsx";
 
 
