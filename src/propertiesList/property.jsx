@@ -52,7 +52,7 @@ function Property() {
     const featchData = async()=> {
        try {
 
-      const res = await axios.get(`http://localhost:5000/property/${params.id}`)
+      const res = await axios.get(`https://blackwood-backend-production.up.railway.app/property/${params.id}`)
               setsetDisplayProperty(res.data)
 
       

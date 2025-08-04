@@ -135,7 +135,7 @@ function AllProperties() {
 
         try {
                   console.log("sending req to backend")
-            const fetch = await axios.get(`http://localhost:5000/properties-list/${location}/${type}${params.toString() != '' ? `?${params.toString()}` : '' }`)
+            const fetch = await axios.get(`https://blackwood-backend-production.up.railway.app/properties-list/${location}/${type}${params.toString() != '' ? `?${params.toString()}` : '' }`)
           setGetAllData(fetch.data.properties)
           setDisplayMessage(fetch.data.message)
         } catch (error) {
