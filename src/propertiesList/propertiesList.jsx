@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import BannerHero from '../components/BannerHero.jsx'
+import BannerHero from '../components/bannerHero.jsx'
 import AllProperties from './allProperties.jsx'
 import { useNavigate, useParams, useLocation as useRouterLocation, useSearchParams } from "react-router";
 import { useLocation as useAppLocation } from "../context/LocationContext.jsx";
