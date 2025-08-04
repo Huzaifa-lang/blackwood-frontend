@@ -31,7 +31,7 @@ function FeaturedProperties() {
     const fetchHomeData = async () => {
       console.log("I ran the featured featch function")
       try {
-        const res = await axios.get(`http://localhost:5000/?country=${location}&type=${activeButton}`);
+        const res = await axios.get(`https://blackwood-backend-production.up.railway.app/?country=${location}&type=${activeButton}`);
         setHomeData(res.data);
         
       } catch (error) {

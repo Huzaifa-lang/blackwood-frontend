@@ -10,7 +10,7 @@ import { LocationProvider } from "./context/LocationContext.jsx";
 import AboutPage from "./about/aboutPage.jsx";
 import Login from "./dashboard/Login.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
-import ProtectedRoute from "./dashboard/ProtectedRoute.jsx";
+import ProtectedRoute from "./dashboard/protectedRoute.jsx";
 
 
 
