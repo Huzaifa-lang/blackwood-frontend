@@ -86,7 +86,7 @@ const [agentImg, setAgentImg] = useState({
 
       const featchData = async()=> {
           try {
-            const res = await apiClient.get(`http://localhost:5000/dashboard/edit/${id}`)
+            const res = await apiClient.get(`https://blackwood-backend-production.up.railway.app/dashboard/edit/${id}`)
 
             const result = await res.data;
             setpropertyPreviewData(result)

@@ -90,7 +90,7 @@ if (selectedLocation === "dubai") {
 
 try {
    const res = await apiClient.post(
-      'http://localhost:5000/dashboard/create',
+      'https://blackwood-backend-production.up.railway.app/dashboard/create',
       formData,
       {
         headers: {

@@ -6,7 +6,7 @@ import { useNavigate, useParams ,useLocation  } from "react-router";
 import { useLocation as useRouteLoaction} from "../context/LocationContext.jsx";
 import axios from "axios";
 import SkeletonSingleProperty from "../components/SkeletonSingleProperty.jsx";
-import PropetiesPageSearchBox from "../components/PropetiesPageSearchBox.jsx";
+import PropetiesPageSearchBox from "../components/propetiesPageSearchBoxMobile.jsx";
 
 const Properties = [
   {

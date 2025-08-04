@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { LayoutGrid, Bed, Bath, MapPin, Copy, Phone  } from "lucide-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import PropertySkeleton from "./PropertySkeleton";
+import PropertySkeleton from "./propertySkeleton";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

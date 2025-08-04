@@ -2,7 +2,7 @@ import axios from "axios";
 import { auth } from "../dashboard/Firebase";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:5000", // Change to your backend URL
+  baseURL: "https://blackwood-backend-production.up.railway.app", // Change to your backend URL
 });
 
 // Add Firebase token to every request

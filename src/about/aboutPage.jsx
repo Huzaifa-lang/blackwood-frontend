@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerHero from '../components/BannerHero'
+import BannerHero from '../components/bannerHero'
 import AboutIntro from './aboutIntro'
 import AboutMission from './AboutMission'
 

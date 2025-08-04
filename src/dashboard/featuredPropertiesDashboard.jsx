@@ -17,7 +17,7 @@ function FeaturedPropertiesDashboard() {
 
       const fetchdata = async()=> {
            try {
-        const res = await apiClient.get(`http://localhost:5000/dashboard/featuredProperties?country=${country}`)
+        const res = await apiClient.get(`https://blackwood-backend-production.up.railway.app/dashboard/featuredProperties?country=${country}`)
         console.log(res.data)
         const extractedProperties = res.data.map(item => ({
   _id: item._id,
