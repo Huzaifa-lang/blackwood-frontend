@@ -148,13 +148,13 @@ function FilterDropdown({ isOpen, register }) {
 
         {/* Property Type */}
         <div className="field-group">
-          <label className="block text-black font-light mb-2">Property Type</label>
+          <label className="block text-black font-light mb-2">Bedrooms</label>
           <div className="relative">
             <select
               {...register('badrooms')}
               className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white"
             >
-              <option value="">Badrooms</option>
+              <option value="">Bedrs</option>
               <option value="1">1+</option>
               <option value="2">2+</option>
               <option value="3">3+</option>
@@ -169,13 +169,13 @@ function FilterDropdown({ isOpen, register }) {
 
         {/* Bedrooms */}
         <div className="field-group">
-          <label className="block text-black font-light mb-2">Bedrooms</label>
+          <label className="block text-black font-light mb-2">Badrooms</label>
           <div className="relative">
             <select
               {...register('bedrooms')}
               className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white"
             >
-              <option value="">Beds</option>
+              <option value="">Badrs</option>
               <option value="1">1+</option>
               <option value="2">2+</option>
               <option value="3">3+</option>

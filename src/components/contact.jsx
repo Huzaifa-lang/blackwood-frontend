@@ -55,7 +55,7 @@ function Contact() {
             <div className='w-[100%] lg:w-[50%] h-full flex flex-col justify-center mb-[50px] lg:mb-0'>
 
                      <span className="flex items-center gap-2">
-                <span className='text-[12px] md:text-[18px]  text-lightBlack font-bold'>Allsopp & Allsopp Private Office</span>
+                <span className='text-[12px] md:text-[18px]  text-lightBlack font-bold'>Blackwood Marketing – Your Real Estate Partner</span>
                 <MoveRight
                 size={50}
                  strokeWidth={0.8}
@@ -64,9 +64,11 @@ function Contact() {
                 className="cursor-pointer"
               />
               </span>
-              <h4 className="text-[0.89rem] md:text-[13px] text-[#222223] leading-5 font-light w-[80%]">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae molestias ex dolor recusandae cum quidem adipisci at assumenda repudiandae reiciendis. Rerum aut consectetur nulla earum beatae tempore adipisci explicabo mollitia fugit ab, facilis cum temporibus sed esse sequi magni cupiditate atque
-              </h4>
+              <p className="text-[0.89rem] md:text-[13px] text-[#222223] leading-5 font-light w-[80%]">
+                Have questions or need assistance? We're here to help! Whether you want to buy, sell, or rent a property, our team is ready to guide you through every step. At Blackwood Marketing, we make real estate simple, secure, and stress-free.
+                <br /><br />
+                Looking to sell or rent your property? <span className="font-bold text-lightBlack">List your property today</span> and connect with genuine buyers and tenants quickly and easily.
+              </p>
               <div className='flex flex-col lg:flex-row items-start lg:items-center justify-start gap-11 mb-11 mt-11'>
                 <div className='flex gap-2 lg:gap-3 items-center'>
                     <span className='h-12 w-12  bg-[#3C7460] flex items-center justify-center rounded-full'><Mail color='#FFFFFF' size={21} /></span>
@@ -92,44 +94,18 @@ function Contact() {
                         <span className='text-[0.95rem] lg:text-[15px] font-normal'>+971 4 876 2333</span>
                         </div>
                 </div>
-                <div className='flex gap-1 lg:gap-3 items-center  '>
-                    <span className='h-12 w-12    bg-[#3C7460] flex items-center justify-center rounded-full '><MapPin 
+                <div className='flex gap-1 lg:gap-2 items-center  '>
+                    <span className='h-12 w-12  bg-[#3C7460] flex items-center justify-center rounded-full '><MapPin 
                     color='#FFFFFF' size={21}/></span>
-                    <div className='flex flex-col text-black'>
+                    <div className='flex flex-col text-black w-[60%]'>
                         <span className='text-[0.95rem] lg:text-[22px] font-medium'>Address:</span>
-                        <span className='text-[0.95rem] lg:text-[15px] font-normal  '>White & Co Real Estate LLC, 7th, 8th & 20th Floor, Control Tower, Motor City, Dubai, UAE</span>
+                        <span className='text-[0.95rem] lg:text-[15px] font-normal  '>White & Co Real Estate LLC, 7th,  8th & 20th Floor, Control Tower, Motor City, Dubai, UAE</span>
                         </div>
                 </div>
               </div>
 
                 
             </div>
-
-            {/* <div className='w-[100%] lg:w-[50%] h-full  pl-11 border-l-2 '>
-                <form action="" className='flex flex-col gap-4  h-full justify-center'>
-                    <div className='w-full h-[4rem] flex relative border-b-2'>
-                    <label htmlFor="name" className='absolute text-black'>NAME</label>
-                    <input type="text"  id='name' className='pt-8 bg-transparent text-black font-bold focus:outline-none focus:ring-0 focus:border-none active:outline-none active:ring-0 active:border-none'/>
-                    </div>
-                    <div className='w-full h-[4rem] flex relative border-b-2'>
-                    <label htmlFor="email" className='absolute text-black'>EMAIL</label>
-                    <input type="email"  id='email' className='pt-8 bg-transparent text-black font-bold focus:outline-none focus:ring-0 focus:border-none active:outline-none active:ring-0 active:border-none'/>
-                    </div>
-                    <div className='w-full flex relative border-b-2'>
-                    <label htmlFor="message" className='absolute text-black'>MESSAGE</label>
-                    <textarea
-  id="message"
-  rows="8"
-  className="w-full pt-8 bg-transparent text-black font-bold outline-none ring-0 border-none focus:outline-none focus:ring-0 focus:border-none active:outline-none active:ring-0 active:border-none"
-  placeholder=""
-/>
-
-                    </div>
-                     <button className="bg-[#3C7460] py-[10px] w-[100%] text-custom12 tracking-wider font-bold uppercase min-w-[113px] text-white flex items-center justify-center gap-2"> <span>Submit</span>
-
-                                </button>
-                </form>
-            </div> */}
 
             <div className="w-full lg:w-1/2 h-full pl-11 border-l-2">
       <form

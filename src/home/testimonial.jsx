@@ -17,34 +17,70 @@ import ClientReview from '../components/clientReview.jsx';
 // Sample Reviews
 const reviews = [
   {
-    name: "Sam Dillow",
-    date: "2025-04-19",
-    profileImg: "unnamed.png",
+    name: "Sophie D.",
+    date: "2025-07-28",
+    profileImg: "/person/named(6).png",
     verifiedIcon: "ti-verified.svg",
     ratingIcon: "s.svg",
     starCount: 5,
-    review: `Satya and her team are thoroughly professional and great to work with. Thank you for your support. 🙏`
+    review: `Blackwood Marketing made my property listing experience so easy. Their team guided me through every step, answered all my questions promptly, and ensured everything was smooth. Highly recommend their services for anyone looking for a stress-free real estate experience!`
   },
   {
-    name: "Jessica Wayne",
-    date: "2025-02-11",
-    profileImg: "unnamed.png",
+    name: "Daniel R.",
+    date: "2025-07-15",
+    profileImg: "/person/named.png",
     verifiedIcon: "ti-verified.svg",
     ratingIcon: "s.svg",
     starCount: 4,
-    review: `Amazing experience! They made the process smooth and easy. Highly recommend.`
-  },
+review: `Great service! They helped me find a tenant quickly and handled all the details professionally. The communication was clear, and the process was stress-free. I’ll definitely use their services again and recommend them to anyone looking for a reliable real estate platform.`
+
+},
   {
-    name: "Michael Johnson",
-    date: "2025-01-15",
-    profileImg: "unnamed.png",
+    name: "Thomas K.",
+    date: "2025-07-10",
+    profileImg: "/person/named (5).png",
     verifiedIcon: "ti-verified.svg",
     ratingIcon: "s.svg",
     starCount: 5,
-    review: `Great service! Prompt, professional, and always ready to help. Will work again.`
-  }
+    review: `Very transparent and reliable. I highly recommend them for anyone looking to rent or buy property! The team was always available and provided honest advice that really helped me make the right decision.`
+  },
+  {
+    name: "Fatima Z.",
+    date: "2025-07-02",
+    profileImg: "/person/named (4).png",
+    verifiedIcon: "ti-verified.svg",
+    ratingIcon: "s.svg",
+    starCount: 5,
+    review: `Loved the professionalism and quick response. Listed my property and got inquiries within days. The process was much easier than I expected.`
+  },
+  {
+    name: "Samuel P.",
+    date: "2025-06-25",
+    profileImg: "/person/named (3).png",
+    verifiedIcon: "ti-verified.svg",
+    ratingIcon: "s.svg",
+    starCount: 4,
+    review: `Excellent platform with great customer support. Everything from the listing to finalizing the deal went smoothly. Will definitely use Blackwood again for my future investments!`
+  },
+  {
+    name: "Rebecca L.",
+    date: "2025-06-18",
+    profileImg: "/person/named (2).png",
+    verifiedIcon: "ti-verified.svg",
+    ratingIcon: "s.svg",
+    starCount: 5,
+    review: `Super easy to list and manage my property. The interface is user-friendly and efficient. I didn’t have to worry about anything.`
+  },
+  {
+    name: "Alex G.",
+    date: "2025-06-05",
+    profileImg: "/person/named (1).png",
+    verifiedIcon: "ti-verified.svg",
+    ratingIcon: "s.svg",
+    starCount: 5,
+    review: `From start to finish, everything was smooth. Great service and trustworthy team! I was impressed by how quickly they responded and handled everything. Truly one of the best experiences I’ve had with a real estate platform.`
+  },
 ];
-
 
 
 const TestimonialSection = () => {

@@ -43,26 +43,26 @@ const CustomNavbar = () => {
   <div className='h-full w-full flex items-center p-4 justify-between'>
   <div className="hidden lg:flex items-center gap-4">
   <a href="https://www.facebook.com/bBlackWoodMarketing/" target="_blank" rel="noopener noreferrer" className="h-6 w-6 transition-transform duration-300 ease-in-out hover:scale-90">
-    <img src="icons8-facebook.svg" alt="Facebook" className="h-full w-full" />
+    <img src="/icons8-facebook.svg" alt="Facebook" className="h-full w-full" />
   </a>
   <a href="https://www.instagram.com/blackwood_marketing/" target="_blank" rel="noopener noreferrer" className="h-6 w-6 transition-transform duration-300 ease-in-out hover:scale-90">
-    <img src="icons8-instagram.svg" alt="Instagram" className="h-full w-full" />
+    <img src="/icons8-instagram.svg" alt="Instagram" className="h-full w-full" />
   </a>
   <a href="https://www.tiktok.com/@blackwoodmarketing" target="_blank" rel="noopener noreferrer" className="h-6 w-6 transition-transform duration-300 ease-in-out hover:scale-90">
-    <img src="icons8-tiktok.svg" alt="TikTok" className="h-full w-full" />
+    <img src="/icons8-tiktok.svg" alt="TikTok" className="h-full w-full" />
   </a>
   <a href="https://www.youtube.com/@BlackWoodMarketing" target="_blank" rel="noopener noreferrer" className="h-6 w-6 transition-transform duration-300 ease-in-out hover:scale-90">
-    <img src="icons8-youtube.svg" alt="YouTube" className="h-full w-full" />
+    <img src="/icons8-youtube.svg" alt="YouTube" className="h-full w-full" />
   </a>
 </div>
 <div className='flex items-center gap-4'>
     <div className='flex items-center gap-2'>
-      <img src="icons8-phone.svg" alt="" className='h-6 w-6' />
+      <img src="/icons8-phone.svg" alt="" className='h-6 w-6' />
       <span className='font-medium text-white text-[0.8rem]'>+923311111127</span>
 
     </div>
     <div className='flex items-center gap-2'>
-      <img src="icons8-email-30.png" alt="" className='h-6 w-6' />
+      <img src="/icons8-email-30.png" alt="" className='h-6 w-6' />
       <span className='font-medium text-white text-[0.8rem]'>info@ inspectify-sa.com</span>
 
     </div>

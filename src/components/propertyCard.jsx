@@ -1,19 +1,16 @@
 import React from 'react'
 import { LayoutGrid, Bed, Bath, MapPin, Dribbble    } from 'lucide-react';
-import { Link } from "react-router";
+import { Link, useLocation as useLocationRoute } from "react-router";
 
 function PropertyCard({item}) {
-
-  const propertyURL = `http://localhost:5173/property/${item._id}`;
+const fullPath = window.location.href;
+  const propertyURL = `${fullPath}${item._id}`;
   const phoneNumber = "923311111127"; // Your WhatsApp number
   const message = `I'm interested in this property: ${propertyURL}`;
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   return (
               <div className="overflow-hidden relative transition-colors duration-300 group border-[2px] border-[#F0F0F0] rounded-lg pb-4 ">
-   {/* <a 
-  href="/properties/w-residences" 
-  className="block custom-cursor no-underline text-black transition-colors duration-300 group"
-> */}
+  
       {/* Image container */}
       <div className=" relative z-10 pt-[60%] lg:pt-[100%]  w-[100%]">
         <div className="absolute inset-0 overflow-hidden rounded-sm ">
@@ -36,13 +33,7 @@ function PropertyCard({item}) {
 
       </div>
 
-      {/* Tags */}
-      {/* <ul className="flex flex-wrap gap-2 mt-3">
-        <li className="text-xs px-2 py-1 bg-gray-100 rounded">Luxury</li>
-        <li className="text-xs px-2 py-1 bg-gray-100 rounded">Value for money</li>
-        <li className="text-xs px-2 py-1 bg-gray-100 rounded">For rent</li>
-        <li className="text-xs px-2 py-1 bg-gray-100 rounded">For resale</li>
-      </ul> */}
+    
 
       {/* Title */}
 
@@ -52,10 +43,9 @@ function PropertyCard({item}) {
         <Link to={`/property/${item._id}`} className="mt-2  mb-2 text-[18px] font-bold text-black text-start hover:underline">{`${item.title}`}</Link>
         <div className='flex gap-2'>
             <MapPin size={18} strokeWidth={3} color={"#3C7460"}/>
-        <span className="text-gray-600 text-[13px] font-light">{item.location}</span>
+        <span className="text-gray-600 text-[13px] font-light">{`${item.location}, ${item.city}`}</span>
 
         </div>
-        {/* <span className="font-semibold">from 2.2M AED</span> */}
       </div>
       {/* icons */}
       <div className='flex items-center justify-between pr-4 pl-4   '>

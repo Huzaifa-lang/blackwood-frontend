@@ -10,9 +10,9 @@ function Footer() {
       <div className="container flex lg:flex-row flex-col-reverse justify-between gap-[3rem] lg:gap-[7rem]">
         {/* left */}
         <div className='w-[100%] lg:w-[40%] b flex flex-col gap-3 items-start' >
-          <span className='h-12 w-auto  '><img src="Blackwoodgreenblack1.webp" alt="" className='w-full h-full'/></span>
-          <span className='text-[12px] font-bold'>KAYE & CO REAL ESTATE LLC is a real estate company based in Dubai, UAE. We have a passion for real estate with innovative and creative concepts. KAYE & CO REAL ESTATE LLC has evolved into one of the fastest-growing and most innovative real estate companies in the UAE</span>
-          <span className='text-[12px] font-bold'>We are regulated by the Real Estate Regulatory Agency under Office Registration Number 17029.</span>
+          <span className='h-12 w-auto  '><img src="/Blackwoodgreenblack1.webp" alt="" className='w-full h-full'/></span>
+          <span className='text-[12px] font-bold'>Blackwood Marketing is a modern real estate platform dedicated to making property transactions simple, transparent, and secure. We specialize in helping individuals and businesses buy, sell, and rent properties with ease, while also providing property owners the opportunity to list their properties effortlessly.</span>
+          <span className='text-[12px] font-bold'>Driven by innovation and a passion for real estate, we aim to deliver exceptional experiences and build lasting trust with our clients.</span>
           
         </div>
         {/* right */}

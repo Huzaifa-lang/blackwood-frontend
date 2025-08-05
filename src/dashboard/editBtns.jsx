@@ -30,7 +30,7 @@ function EditBtns({editOptions, itemId}) {
 const handleConfirmYes = async () => {
   try {
     // 🔥 Call your backend delete API here
-   const res = await apiClient.delete(`http://localhost:5000/dashboard/delete/${itemId}`);
+   const res = await apiClient.delete(`https://blackwood-backend-production.up.railway.app/dashboard/delete/${itemId}`);
     setShowConfirm(false);
 
     if (res.status === 200) {
@@ -42,7 +42,7 @@ const handleConfirmYes = async () => {
     // Optionally: refresh page, navigate away, or show success toast
   } catch (error) {
     console.error("Error deleting:", error);
-          setMsg({ text: err.response?.data?.message || "Something went wrong", type: "error" });
+          setMsg({ text: error.response?.data?.message || "Something went wrong", type: "error" });
 
   }
 };

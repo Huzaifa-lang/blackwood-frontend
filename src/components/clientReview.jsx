@@ -4,7 +4,6 @@ import { useSwiper, useSwiperSlide } from 'swiper/react';
 
 function ClientReview({review}) {
 
-  console.log(review)
 
   const [expanded, setExpanded] = useState(false);
   const [needsExpand, setNeedsExpand] = useState(false);
@@ -22,6 +21,8 @@ function ClientReview({review}) {
     }
   }, []);
 
+
+  
   useEffect(() => {
     if (contentRef.current) {
       if (expanded) {
@@ -29,6 +30,7 @@ function ClientReview({review}) {
       } else {
         setMaxHeight('87px');
       }
+      console.log("YEs I am expanded", expanded)
     }
   }, [expanded]);
 

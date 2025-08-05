@@ -55,7 +55,7 @@ listTopRef.current?.scrollIntoView({
 
       const fetchdata = async()=> {
            try {
-        const res = await apiClient.get(`http://localhost:5000/dashboard?country=${country}`)
+        const res = await apiClient.get(`https://blackwood-backend-production.up.railway.app/dashboard?country=${country}`)
         // console.log(res.data)
         setDisplayProperties(res.data)
 
@@ -82,7 +82,7 @@ listTopRef.current?.scrollIntoView({
 
        const fetchdata = async()=> {
            try {
-        const res = await axios.get(`http://localhost:5000/dashboard?country=${country}&${query}`)
+        const res = await axios.get(`https://blackwood-backend-production.up.railway.app/dashboard?country=${country}&${query}`)
         console.log(`/dashboard?country=${country}&${query}`)
         setDisplayProperties(res.data)
 

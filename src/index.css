@@ -30,7 +30,7 @@ a:link {
   position: absolute !important;
 }
 
-.btn-close {
+body .btn-close {
   background-color: #3C7460 !important;
   --bs-btn-close-opacity: 1 !important;
   background-size: 24px 24px!important;
@@ -38,7 +38,8 @@ a:link {
     height: 20px !important; /* Ensure the button itself is larger */
   
 
-  --bs-btn-close-bg: url("icons8-close.svg") !important;
+  --bs-btn-close-bg: url("/icons8-close.svg") !important;
+ 
 
 }
 
@@ -51,7 +52,7 @@ a:link {
 }
 
 #lines {
-  background-image: url("lines.svg");
+  background-image: url("/lines.svg");
 background-repeat: no-repeat;
 background-size: cover;
 filter: invert(1); 
@@ -59,7 +60,7 @@ filter: invert(1);
 }
 
 #lines-black {
-    background-image: url("lines.svg");
+    background-image: url("/lines.svg");
   --background-overlay: '';
 background-position: center right;
 background-repeat: no-repeat;
@@ -163,12 +164,15 @@ select option {
 
 
   .ListPropertyBanner-container {
-    background-image: url("banner-01-01.png");
+    background-image: url("/banner-01-01.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-@media (min-width: 768px) {
+  
+
+@media (min-width: 1023px) {
+
   .swiper-pagination {
     display: none !important;
   }

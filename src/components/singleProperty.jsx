@@ -5,6 +5,12 @@ import PreviewThumbProperty from '../propertiesList/previewThumbProperty.jsx';
 import EditBtns from '../dashboard/editBtns.jsx'
 import SkeletonSingleProperty from './SkeletonSingleProperty.jsx';
 function SingleProperty({item , editOptions}) {
+
+  const fullPath = window.location.href;
+  const propertyURL = `${fullPath}${item._id}`;
+  const phoneNumber = "923311111127"; // Your WhatsApp number
+  const message = `I'm interested in this property: ${propertyURL}`;
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     const showEditOptions = editOptions ?? false;
 
   
@@ -14,7 +20,7 @@ function SingleProperty({item , editOptions}) {
   return (  
     <>
     {display ? (
-      <div className="  w-full flex  lg:flex-row flex-col bg-purple-50 ">
+      <div className="  w-full flex  lg:flex-row flex-col bg-lightWhite ">
             <PreviewThumbProperty item={item.images}/>
             {/* content */}
             <div className="w-[100%] lg:w-[70%]  h-full">
@@ -50,7 +56,7 @@ function SingleProperty({item , editOptions}) {
         
         <div className='flex gap-2'>
             <MapPin size={20} strokeWidth={3} color={"#3C7460"}/>
-        <span className="text-gray-600 text-[15px] font-light">{item.location}</span>
+        <span className="text-gray-600 text-[15px] font-light">{`${item.location}, ${item.city}`}</span>
 
         </div>
       </div>
@@ -83,9 +89,7 @@ function SingleProperty({item , editOptions}) {
         </li>
       </ul>
      <a
-  href={`https://wa.me/923001234567?text=${encodeURIComponent(
-    `Hi, I'm interested in this property: https://yourwebsite.com/property/`
-  )}`}
+  href={whatsappLink}
   target="_blank"
   rel="noopener noreferrer"
   className="hidden lg:flex items-center justify-center text-white text-[12px] no-underline uppercase font-normal tracking-wider transition-all duration-300 bg-[#3a7f77] hover:bg-[#2f6f68]
@@ -103,9 +107,7 @@ function SingleProperty({item , editOptions}) {
 
 <div>
  <a
-  href={`https://wa.me/923001234567?text=${encodeURIComponent(
-    `Hi, I'm interested in this property: https://yourwebsite.com/property/`
-  )}`}
+  href={whatsappLink}
   target="_blank"
   rel="noopener noreferrer"
   className="flex lg:hidden items-center justify-center text-white text-[12px] no-underline uppercase font-normal tracking-wider transition-all duration-300 bg-[#3a7f77] hover:bg-[#2f6f68]
@@ -130,7 +132,7 @@ function SingleProperty({item , editOptions}) {
       ? item?.details?.description.substring(0, 500) + "..."
       : item?.details?.description}
       </span>
-         <Link to={`/property/${item._id}`} className='ti-read-more-link text-[10px] font-light text-[#8A8A8A] hover:text-black hover:underline text-sm mt-1 w-full text-left block'>
+         <Link to={`/property/${item._id}`} className='ti-read-more-link text-[10px] font-light text-[#8A8A8A] hover:text-black hover:underline text-sm mt-1 w-full text-left block mb-2'>
               Read More
             </Link>
       </div>

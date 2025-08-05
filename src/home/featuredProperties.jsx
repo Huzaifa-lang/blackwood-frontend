@@ -95,7 +95,7 @@ function FeaturedProperties() {
         }`}
         onClick={() => setActiveButton('rent')}
       >
-        sell
+        Rent
       </button>
         </div>
        

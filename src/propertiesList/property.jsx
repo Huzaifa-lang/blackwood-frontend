@@ -71,7 +71,7 @@ function Property() {
     <>
     {displayProperty === null ? <PropertySkeleton/> : (
       <>
-       <div className="h-[50vh] lg:h-[calc(100vh-100px)] flex gap-2 mb-[60px]  relative">
+       <div className="h-[50vh] lg:h-[calc(100vh-100px)] flex gap-2 mb-[20px] lg:mb-[60px]  relative ">
        <div className="w-[100%] lg:w-[60%] h-full">
   {/* Main Swiper */}
   <Swiper
@@ -90,7 +90,7 @@ function Property() {
         <img
           src={imgUrl}
           alt={`Property Image ${index + 1}`}
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-cover"
         />
       </SwiperSlide>
     ))}
@@ -124,7 +124,7 @@ function Property() {
   </div>
 </div>
 
-        <div className="hidden lg:flex absolute  bottom-[2rem] right-[3rem]  z-50">
+        <div className="hidden lg:flex absolute  bottom-[2rem] right-[3rem]  z-50 ">
           <button onClick={() => setOpen(true)} className="p-2 bg-greenCustom rounded-sm text-white text-[15px]">View All Photos</button>
         </div>
     </div>
@@ -209,7 +209,7 @@ function Property() {
              <div className="w-[100%] lg:w-[30%] ">
             <div className="w-full !min-h-[35rem] bg-[#F7F6F2] p-8 flex flex-col gap-2 rounded-lg">
                 {/* img */}
-                <div className="pt-[130%] bg-orange-600 rounded-lg relative"><img src="person.png" alt="" className="absolute top-0 left-0 w-full h-full rounded-lg" />
+                <div className="pt-[130%] bg-transparent rounded-lg relative"><img src="person.png" alt="" className="absolute top-0 left-0 w-full h-full rounded-lg" />
                 <img src={displayProperty.property.agent.image} alt="" className="h-full w-full absolute top-0 left-0" />
                 </div>
                 {/* text */}
@@ -229,8 +229,9 @@ function Property() {
                               <button
   onClick={() => {
     if (displayProperty.property.agent.whatsapp) {
+        const fullPath = window.location.href;
       const phone = displayProperty.property.agent.whatsapp; // WhatsApp number
-      const propertyUrl = `http://localhost:5173/property/${displayProperty.property._id}`;
+      const propertyUrl = `${fullPath}`;
       const message = encodeURIComponent(`I'm interested in this property: ${propertyUrl}`);
       const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
       window.open(whatsappUrl, "_blank");
@@ -247,29 +248,7 @@ function Property() {
 
 
                 </div>
-                {/* socail media */}
-                {/* <div className="flex flex-col justify-center items-center gap-2 mt-3">
-                    <span className="text-[15px] capitalize font-bold">Share This Property</span>
-                    <div className="flex items-center justify-center gap-2">
-                        <span className="h-10 w-10 bg-greenCustom flex items-center justify-center rounded-full"><Copy size={18}
-                        strokeWidth={3}
-                        color="#ffffff"
-                        /></span>
-                        <span className="h-10 w-10 bg-greenCustom flex items-center justify-center rounded-full"><Copy size={18}
-                        strokeWidth={3}
-                        color="#ffffff"
-                        /></span>
-                        <span className="h-10 w-10 bg-greenCustom flex items-center justify-center rounded-full"><Copy size={18}
-                        strokeWidth={3}
-                        color="#ffffff"
-                        /></span>
-                        <span className="h-10 w-10 bg-greenCustom flex items-center justify-center rounded-full"><Copy size={18}
-                        strokeWidth={3}
-                        color="#ffffff"
-                        /></span>
-                       
-                    </div>
-                </div> */}
+               
             </div>
         </div>
         )}

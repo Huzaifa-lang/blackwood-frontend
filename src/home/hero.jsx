@@ -20,7 +20,7 @@ function Hero() {
     <div className=' container h-full flex items-center justify-center relative z-10' >
       <div className="hero-content-container flex flex-col md:gap-4  gap-2 tems-center justify-center ">
         <h1 className='md:text-[70px] text-[40px] text- text-center font-dmserif text-white'>Professional. Transparent. Authentic.</h1>
-        <p className='md:text-lg text-sm font-normal text-white text-center '>The award-winning brokerage provides a new standard of service.</p>
+        <p className='md:text-lg text-sm font-normal text-white text-center '>Connecting you to the right property with honesty and expertise.</p>
         <SearchBox/>
       </div>
 

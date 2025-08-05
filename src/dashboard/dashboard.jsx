@@ -4,7 +4,7 @@ import CreatePropertyDashboard from "./createPropertyDashboard.jsx";
 import { FormProvider, useForm } from "react-hook-form";
 import AllPropertiesDashboard from "./allPropertiesDashboard.jsx";
 import FeaturedPropertiesDashboard from "./featuredPropertiesDashboard.jsx";
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import {  Button , Modal} from "react-bootstrap";
 import DashboardSidebarMobile from './dashboardSidebarMobile.jsx'
 
@@ -21,6 +21,8 @@ function Dashboard() {
     SectionBtn: "AllProperties"
   }
 });
+
+const navigate = useNavigate()
 
 const { watch, register } = methods; // You can still extract watch for local use
 
@@ -48,7 +50,7 @@ const { watch, register } = methods; // You can still extract watch for local us
     <section className="">
       <nav className=" h-[4rem] bg-greenCustom">
         <div className="!h-full flex items-center justify-between p-4">
-          <img src="\logo-white.svg" alt="" className="h-4 cursor-pointer" />
+          <img src="\Blakcwoodgreenwhite1.webp" alt="" className="h-8 cursor-pointer" onClick={()=> navigate('/')}/>
           <div className="flex items-center gap-4">
         {/* Settings Icon with Tooltip */}
         <div

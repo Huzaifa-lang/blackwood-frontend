@@ -11,8 +11,7 @@ import AboutPage from "./about/aboutPage.jsx";
 import Login from "./dashboard/Login.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./dashboard/protectedRoute.jsx";
-
-
+import ScrollToTop from "./components/scrollToTop.jsx";
 
 
 function App() {
@@ -22,6 +21,7 @@ function App() {
   <BrowserRouter>
   <AuthProvider>
       <LocationProvider>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

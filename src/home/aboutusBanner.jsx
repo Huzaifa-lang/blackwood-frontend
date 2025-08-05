@@ -19,17 +19,14 @@ function AboutusBanner() {
            
 
               <span className="text-[12px] md:text-[18px]  text-lightBlack font-bold ">
-                Allsopp & Allsopp Private Office
+                About Blackwood Marketing
               </span>
               <h4 className="text-[25px] lg:text-[40px] text-white font-bold w-[80%]   font-dmserif">
-                Dubai’s first-ever homegrown private office for ultra-luxury
-                property advisory
+                Your trusted partner in real estate.
               </h4>
-              <p className=" text-[12px] lg:text-[18px] text-white font-light w-[85%]">
-                Catering exclusively to high-net-worth individuals,
-                ultra-high-net-worth individuals and family offices, offering
-                exceptionally comprehensive advisory services with the utmost
-                confidentiality and discretion.
+              <p className=" text-[12px] lg:text-[15px] text-white font-light w-[85%]">
+                At Blackwood Marketing, we bring professionalism, transparency, and authenticity to the property market. Whether you're looking to buy, sell, or rent, we provide seamless solutions designed to meet your needs. <br /> <br />
+                We empower property owners to list with ease and connect buyers and renters with their dream homes. Our mission is simple: to make real estate transactions smooth, secure, and stress-free.
               </p>
               <Link to='/about' className="bg-greenCustom py-[10px] px-[25px] text-custom12 tracking-wider font-bold uppercase min-w-[113px] text-white border-2">Read More</Link>
           </div>

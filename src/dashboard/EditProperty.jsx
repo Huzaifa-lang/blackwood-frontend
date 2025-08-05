@@ -238,8 +238,8 @@ const handleConfirmYes = async () => {
       formPayload.append("agentOldImage", agentImg.image);
     }
 
-    const res = await axios.put(
-      `http://localhost:5000/dashboard/edit/${id}`,
+    const res = await apiClient.put(
+      `https://blackwood-backend-production.up.railway.app/dashboard/edit/${id}`,
       formPayload,
       {
         headers: {
@@ -251,6 +251,7 @@ const handleConfirmYes = async () => {
     console.log("Data sent:", res.data);
     setShowConfirm(false);
     alert("File updated successfully!");
+    reset()
 
   } catch (error) {
     console.error("Error preparing data:", error);
