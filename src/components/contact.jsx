@@ -107,7 +107,7 @@ function Contact() {
                 
             </div>
 
-            <div className="w-full lg:w-1/2 h-full pl-11 border-l-2">
+            <div className="w-full lg:w-1/2 h-full pl-0 lg:pl-11 lg:border-l-2">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-4 h-full justify-center"

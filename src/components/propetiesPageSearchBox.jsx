@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams, useLocation as useRouteLoaction} from "react-router";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, X  } from "lucide-react";
 import axios from "axios";
 import { useLocation } from "../context/LocationContext.jsx";
 import PropetiesPageSearchBoxMobile from "./propetiesPageSearchBoxMobile.jsx";
@@ -13,7 +13,7 @@ function PropetiesPageSearchBox(props) {
     const queryObject = Object.fromEntries(params.entries());
    const {minPrice, maxPrice, bedrooms, bathroom, search} = queryObject
   const { type } = useParams(); // from URL: /properties-list/dubai/:type
-
+  const [filterBtns, setFilterBtns] = useState(null)
 
   const [bothSearch, setBothSearch] = useState('')
 
@@ -50,13 +50,14 @@ function PropetiesPageSearchBox(props) {
   Object.entries(data).filter(([key, value]) => key !== 'type' && value !== '')
 );
     const {type } = data
-    const query  = new URLSearchParams(filteredData).toString()
-
+      const query  = new URLSearchParams(filteredData).toString()
+    setFilterBtns(query !== '' ? query.split("&") : null)
     navigate(`/properties-list/${location}/${type}${query != '' ? `?${query}` : ''}` )
 
 
     
   };
+
 
     useEffect(() => {
     if (selectedType) {
@@ -65,6 +66,17 @@ function PropetiesPageSearchBox(props) {
   }, [selectedType, selectedminPrice, selectedmaxPrice, selectedbedrooms, selectedTypebathroom]); // jab bhi type change ho, submit call hoga
 
   
+  const handleFiltersBtns = (key) => {
+    if(key === 'search') {
+    setBothSearch('');        // ✅ Clear local input state
+    setValue('search', '');   // ✅ Clear react-hook-form value
+    handleSubmit(onSubmitDesktop)()
+
+    } else {
+
+      setValue(key, '')
+    }
+  }
 
   return (
     <>
@@ -244,6 +256,19 @@ function PropetiesPageSearchBox(props) {
 
         
       </form>
+
+         <div className="hidden lg:flex flex-wrap gap-2">
+          <div  className="min-h-4 min-w-4 flex items-center gap-3 bg-[#F2F0EC] p-2">
+        <span>Looking to: <span className="font-medium">{type.charAt(0).toUpperCase() + type.slice(1)}</span></span>
+       </div>
+       { filterBtns?.map((item, index)=> ( 
+        <div  key={`${item}-${index}`} className="min-h-4 min-w-4 flex items-center gap-3 bg-[#F2F0EC] p-2">
+        <span>{item.split('=')[0].toLowerCase()}:<span className="font-medium">{item.split('=')[1]}</span></span>
+        <span className="cursor-pointer" onClick={()=> handleFiltersBtns(item.split('=')[0])}> <X size={14}/></span>
+       </div>
+       ))}
+      </div>
+
       
       <div className='flex md:flex lg:hidden'>
         <PropetiesPageSearchBoxMobile bothSearch={bothSearch} setBothSearch={setBothSearch}/>

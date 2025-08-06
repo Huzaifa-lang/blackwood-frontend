@@ -128,7 +128,7 @@ function SearchBox() {
             key={tab}
             type="button"
             onClick={() => setActiveTab(tab)}
-            className={`flex  items-center justify-center md:px-12 px-4 h-11 w-[20%] lg:w-[40%] rounded-t-md transition-all ${
+            className={`flex  items-center justify-center md:px-12 px-4 h-11 w-[40%] rounded-t-md transition-all ${
               activeTab === tab
                 ? 'bg-greenCustom text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'

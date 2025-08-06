@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from "react-hook-form";
 
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, X } from "lucide-react";
 
 import { Offcanvas, Nav } from "react-bootstrap";
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams , useLocation as useRouteLoaction} from 'react-router';
 import { useLocation } from '../context/LocationContext';
 
 
 function PropetiesPageSearchBoxMobile(porps) {
-
+    const ReactLoaction = useRouteLoaction()
   const {setBothSearch, bothSearch} = porps
   const {location} = useLocation
-  
+    const { type } = useParams(); 
   const {
       register,
       handleSubmit,
@@ -22,11 +22,20 @@ function PropetiesPageSearchBoxMobile(porps) {
     } = useForm();
 
     const navigate = useNavigate();
+  const query = ReactLoaction.search.replace("?", "").trim();
 
+const queryFilter = query
+  ? query.split("&").map(param => param) // keep as strings like "key=value"
+  : [];
+
+const [filterBtns, setFilterBtns] = useState(queryFilter.length > 0 ? queryFilter : null);
      const [show, setShow] = useState(false);
       const handleClose = () => setShow(false);
       const handleShow = () => setShow(true);
 
+      useEffect(()=> {
+        console.log(filterBtns)
+      },[filterBtns])
  
   const onSubmitMobile = (data) => {
   const filteredData = Object.fromEntries(
@@ -34,18 +43,50 @@ function PropetiesPageSearchBoxMobile(porps) {
     .filter(([key, value]) => key !== 'type' && value !== '') // Remove 'type' and empty values
     .map(([key, value]) => [key === 'searchMobile' ? 'search' : key, value]) // Rename key
 );
-
+  
     const {type } = data
     const query  = new URLSearchParams(filteredData).toString()
-
+  console.log(query)
     navigate(`/properties-list/${location}/${type}${query != '' ? `?${query}` : ''}` )
+    setFilterBtns(query !== '' ? query.split("&") : null)
     handleClose()
 
     
   };
 
+
+    const handleFiltersBtns = (key) => {
+    if(key === 'searchMobile') {
+    setBothSearch('');        // ✅ Clear local input state
+    setValue('searchMobile', '');   // ✅ Clear react-hook-form value
+    handleSubmit(onSubmitMobile)()
+
+    } else {
+
+      setValue(key, '')
+      handleSubmit(onSubmitMobile)()
+
+    }
+  }
+
+
+
+
   return (
     <div className='w-full'>
+
+        <div className="flex lg:hidden flex-wrap gap-2">
+                <div  className="min-h-4 min-w-4 flex items-center gap-3 bg-[#F2F0EC] p-2">
+              <span>Looking to: <span className="font-bold">{type.charAt(0).toUpperCase() + type.slice(1)}</span></span>
+             </div>
+             { filterBtns?.map((item, index)=> ( 
+              <div  key={`${item}-${index}`} className="min-h-4 min-w-4 flex items-center gap-3 bg-[#F2F0EC] p-2">
+              <span>{item.split('=')[0].toLowerCase()}:<span className="font-bold">{item.split('=')[1]}</span></span>
+              <span className="cursor-pointer" onClick={()=> handleFiltersBtns(item.split('=')[0])}> <X size={14}/></span>
+             </div>
+             ))}
+            </div>
+
         {/* filter mobile btn */}
       <div className="flex h-[3.5rem]   w-[25%] gap-2 mt-2 cursor-pointer">
         <div

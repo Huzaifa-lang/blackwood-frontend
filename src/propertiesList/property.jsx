@@ -124,7 +124,7 @@ function Property() {
   </div>
 </div>
 
-        <div className="hidden lg:flex absolute  bottom-[2rem] right-[3rem]  z-50 ">
+        <div className="flex absolute  bottom-[2rem] right-[3rem]  z-50 ">
           <button onClick={() => setOpen(true)} className="p-2 bg-greenCustom rounded-sm text-white text-[15px]">View All Photos</button>
         </div>
     </div>
